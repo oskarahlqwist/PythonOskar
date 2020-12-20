@@ -1,44 +1,8 @@
-'''
-1 tar in datum under 2020 (366 dagar), dag för dag, date(year, month, day) date object
-2 slår ihop nummer i datumet
-3 funktion som adderar nummer
-4 om datumet är sant, lägg till i listan
-5 nar programmet har gjort 366 utrakningar, rakna ut hur stor sanolikhet det ar. 
-'''
-'''
-import datetime
 from datetime import timedelta, date
-
-d = §
-
-dt = d.strftime("%d/%m/%y")
-'''
-'''
-from datetime import date, timedelta
-
-sdate = date(2020, 1, 1)   # start date
-edate = date(2021, 1, 1)   # end date
-
-delta = edate - sdate       # as timedelta
-
-for i in range(delta.days + 1):
-    day = sdate + timedelta(days=i)
-    print (day)
-'''
-
-from datetime import timedelta, date
-
-
 
 def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
-
-        ###from datetime import date, timedelta
-        # sdate = date(2020, 1, 1)   # start date
-        # edate = date(2021, 1, 1)   # end date
-        # delta = edate - sdate   
-
 
 
 def dateequalsseven():
@@ -48,7 +12,7 @@ def dateequalsseven():
     end_date = date(2021, 1, 1)
 
     
-    allnumbers = []
+    allnumbers = [] 
     
     i = 0
     
