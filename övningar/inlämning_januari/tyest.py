@@ -6,7 +6,7 @@
 #1.) Lista alla medlemmar i föreningen.
 #2.) Tala om vem som personen X gillar.
 #3.) Tala om vem som personen X delar rum med.
-#4.) Avlsuta
+#4.) Avsluta
 
 #Tilläggskrav:
 
@@ -22,25 +22,52 @@ from create_sorority_world import pickle
 with open("sorority_world.p", "rb") as f:
     members,likes,rooms_with = pickle.load(f) 
 
-askname = input("Skriv namn: ")
+def checkMembers():
+    print (members)
 
-if askname in members:
-    print(askname,"gillar: ", likes[askname])
-    print("och delar rum med:", rooms_with[askname])
-else:
-    print(askname, "är inte med i föreningen")
+def checkRoomates():
+    askName = input("Skriv namn: ")
+    if askName in members:
+        print("och delar rum med:", rooms_with[askName])
+    else:
+        print(askName, "är inte med i föreningen")
 
-#Gör en funktion som kollar om askname gillar alla. Om alla namn förutom sitt eget finns i members gillar hon alla.
+def checkLikes():
+    askName = input("Skriv namn: ")
+    likeAll = ['Augusta','Charmain','Billie','Mandy','Charlotte','Lesley']
+    if askName not in likeAll:
+        print(askName, "är inte med i föreningen")
+        exit()
+    askFriends = likes.get(askName)
+    likeAll.sort() 
+    askFriends.sort() 
+    
+    if not askFriends:
+        print(askName, "gillar inte någon")
 
-likeAll = ['Augusta','Charmain','Billie','Mandy','Charlotte','Lesley']
+    if askName in members:
+        print(askName,"gillar: ", likes[askName])
 
-if askname in likeAll:
-    likeAll.remove(askname)
+    if askName in likeAll:
+        likeAll.remove(askName)
+    
+    if likeAll == askFriends: 
+        print (askName, "gillar alla")
 
-askFriends = likes.get(askname)
+meny = True
+while meny:
+    print("1.Lista alla medlemmar i föreningen.")
+    print("2.Tala om vem som personen X gillar")
+    print("3.Tala om vem som personen X delar rum med.")
+    print("4. Avsluta.")
 
-likeAll.sort() 
-askFriends.sort() 
-
-if likeAll == askFriends: 
-    print (askname, "gillar alla")
+    alternativ = input("kör: ")
+    
+    if alternativ == "1":
+        checkMembers()
+    elif alternativ == "2":
+        checkLikes()
+    elif alternativ == "3":
+        checkRoomates()
+    else:
+        meny = False

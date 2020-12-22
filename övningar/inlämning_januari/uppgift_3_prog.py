@@ -25,7 +25,7 @@ with open("sorority_world.p", "rb") as f:
 def checkMembers():
     print (members)
 
-def checkRoomates(askName):
+def checkRoomates():
     askName = input("Skriv namn: ")
     if askName in members:
         print("och delar rum med:", rooms_with[askName])
@@ -35,26 +35,34 @@ def checkRoomates(askName):
 def checkLikes():
     askName = input("Skriv namn: ")
     likeAll = ['Augusta','Charmain','Billie','Mandy','Charlotte','Lesley']
+    if askName not in likeAll:
+        print(askName, "är inte med i föreningen")
+        exit()
     askFriends = likes.get(askName)
     likeAll.sort() 
     askFriends.sort() 
     
+    if not askFriends:
+        print(askName, "gillar inte någon")
+
     if askName in members:
         print(askName,"gillar: ", likes[askName])
-    
+
     if askName in likeAll:
         likeAll.remove(askName)
     
     if likeAll == askFriends: 
         print (askName, "gillar alla")
 
-meny == True
+meny = True
 while meny:
     print("1.Lista alla medlemmar i föreningen.")
-    print("2.Tala om vem som personen X gillar".
+    print("2.Tala om vem som personen X gillar")
     print("3.Tala om vem som personen X delar rum med.")
     print("4. Avsluta.")
+
     alternativ = input("kör: ")
+    
     if alternativ == "1":
         checkMembers()
     elif alternativ == "2":
@@ -62,4 +70,4 @@ while meny:
     elif alternativ == "3":
         checkRoomates()
     else:
-        meny == False
+        meny = False
