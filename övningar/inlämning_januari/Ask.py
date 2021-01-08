@@ -1,14 +1,14 @@
 
 def check_datatype (data,datatype,message):
     if datatype == "String":
-        if data != "":
-            return True, str(data)
+        if data.isalpha():
+            return True, data
         else:
             print(message)
             return False, data
 
     elif datatype == "Int":
-        if isinstance(data, int):
+        if data.isdigit():
             return True, int(data)
         else:
             print(message)
@@ -16,10 +16,12 @@ def check_datatype (data,datatype,message):
     
     elif datatype == "Float":
         if not data.isdigit():
-            return True, float(data)
-        else:
-            print(message)
-            return False, data
+            try:
+                float(data)
+                return True, float(data)
+            except ValueError:
+                print(message)
+                return False, data
             
 def check_interval(data,start,end,message):
     if data.isdigit() and start < int(data) < end:
