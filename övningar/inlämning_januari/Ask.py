@@ -1,4 +1,3 @@
-
 def check_datatype (data,datatype,message):
     if datatype == "String":
         if data.isalpha():
