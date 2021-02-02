@@ -1,10 +1,9 @@
-n = int(input("Hur många nummer vill du skriva?: "))
-
-nums = []
-x = 0
-for i in range(n):
-    x = x + 1
-    print("skriv nummer: ", x)
-    nums.append(int(input()))
-
-print("Summan är: ", sum(nums))
+def fibonacci(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 1
+    elif n>2:
+        return fibonacci(n-1) + fibonacci(n-2)
+for n in range (1, 11):
+    print(n, ":", fibonacci(n))
