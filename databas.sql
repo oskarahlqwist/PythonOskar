@@ -73,5 +73,5 @@ insert into SPJ values ('S5','P4','J4',800);
 insert into SPJ values ('S5','P5','J4',400);
 insert into SPJ values ('S5','P6','J4',500);
 
-SELECT 
+SELECT *
 FROM S;
