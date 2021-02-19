@@ -48,7 +48,3 @@ class Hund:
     def __str__(self):
         return '%-15s %-10s %-15s %-4d %-15s' % (self.__namn__,self.__ras__,self.__typ__,self.__alder__,self.__farg__)
 
-    def __str__(self):
-        str = self.__agare__.get_namn() if self.__agare__ != None else 'No Owner'
-        return '%-20s %-10s %-15s %-4d %-15s %-15s' %    \
-            (self.__namn__,self.__ras__,self.__typ__,self.__alder__,self.__farg__,str)
