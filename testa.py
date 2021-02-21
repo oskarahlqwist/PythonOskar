@@ -1,11 +1,5 @@
-from dataclasses import dataclass
+import numpy as np
 
-@dataclass
-class Position:
-    name: str
-    lon: float
-    lat: float
+arr = np.array (42)
 
-t = Position("Oskar", 20.32, 23.55)
-
-print(f'{t.name} is at {t.lat}°N, {t.lon}°E')
+print(arr)

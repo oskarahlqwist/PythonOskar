@@ -1,5 +1,5 @@
 #övning 1
-
+"""
 def make_sum(n):
     if (n >= 1):
         print(n,'+','f (',n-1,')')
@@ -39,7 +39,6 @@ def fibonacci(n):
         return 1
     elif n>2:
         return fibonacci(n-1) + fibonacci(n-2)
-for n in range (1, 11):
+for n in range (1, 4):
     print(n, ":", fibonacci(n))
-
-
+"""
