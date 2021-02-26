@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class User:
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -24,3 +25,10 @@ user_list = []
 user_list.append(new_user.get_fullname())
 user_list.append(new_friend.get_fullname())
 print(user_list)
+=======
+import numpy as np
+
+arr = np.array (42)
+
+print(arr)
+>>>>>>> 07c9fcccfe457afa5092b719a54c71e4f82274ba
