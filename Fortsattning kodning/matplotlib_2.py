@@ -1,19 +1,28 @@
-import matplotlib.pyplot as plt 
 import numpy as np
+import matplotlib.pyplot as plt
 
-x = np.array([0, 100])
-x2 = np.array([0, 50])
-x3 = np.array([0, 200])
-xaxeln = np.array([0, 250])
+x = [1,2,3,3,3,3,4,2,1]
 
-plt.plot(xaxeln, x, label="1", c = '#00fb00')
-plt.plot(xaxeln, x2, label="2", c = '#ff00ff')
-plt.plot(xaxeln, x3, label="3", c = 'Black')
-
-
-plt.xlabel("X-axeln")
-plt.ylabel("Y-axeln")
-plt.title("Mitt diagram")
-
-plt.legend()
+plt.hist(x, bins = 10)
 plt.show()
+
+
+
+
+
+
+"""
+np.random.seed(19680201) ###Ge ett pseudo nummer för att simulera randomness.
+N_values = 255
+n_bins = 5  ###
+
+mu, sigma = 200, 25
+x = mu + sigma * np.random.randn(N_values)
+
+
+plt.hist(x, n_bins, density=True)
+
+plt.xlabel('Värde')
+plt.ylabel('Sannolikhet')
+plt.title('Histogram med normalfördelning')
+plt.show()"""
