@@ -13,7 +13,7 @@ HANGMAN = [
 
 WORDS = [
     'CASA', 'CARRO', 'MONO', 'ESTERNOCLEIDOMASTOIDEO', 'PYTHON', 'DJANGO',
-    'MILTON', 'LENIS', 'SWAPPS', 'LOGIA', 'UNITTESTING'UnboundLocalError
+    'MILTON', 'LENIS', 'SWAPPS', 'LOGIA', 'UNITTESTING'
 ]
 
 class Hangman():
