@@ -49,3 +49,6 @@ print()
 conn.close()
 
 #10
+
+cursor.execute('''select count(*) from sp natural join s where sname  = ?''',(qname,))
+
