@@ -13,7 +13,7 @@ HANGMAN = [
 
 WORDS = [
     'CASA', 'CARRO', 'MONO', 'ESTERNOCLEIDOMASTOIDEO', 'PYTHON', 'DJANGO',
-    'MILTON', 'LENIS', 'SWAPPS', 'LOGIA', 'UNITTESTING'UnboundLocalError
+    'MILTON', 'LENIS', 'SWAPPS', 'LOGIA', 'UNITTESTING'
 ]
 
 class Hangman():
@@ -97,7 +97,7 @@ class Hangman():
                 self.failed_attempts += 1
         print("\n¡OMG! You lost!")
 
-if __name__ == '__main__':
-    word_to_guess = random.choice(WORDS)
-    hangman = Hangman(word_to_guess)
-    hangman.play()
+
+word_to_guess = random.choice(WORDS)
+hangman = Hangman(word_to_guess)
+hangman.play()
