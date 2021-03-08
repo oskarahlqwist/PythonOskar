@@ -1,20 +1,37 @@
 import turtle
 
 t = turtle.Turtle()
-t.speed(1000)
 
-for i in range(3):
-  t.forward(200)
-  t.left(120)
+t.pensize(5) 
+  
+t.color("blue") 
+t.penup() 
+t.goto(-110, -25) 
+t.pendown() 
+t.circle(45) 
 
-t.forward(95)
-
-for i in range(36):
-  t.forward(10)
-  t.left(10)
-
-t.forward(6)
-t.left(90)
-t.forward(172)
+t.color("black") 
+t.penup() 
+t.goto(0, -25) 
+t.pendown() 
+t.circle(45) 
+  
+t.color("red") 
+t.penup() 
+t.goto(110, -25) 
+t.pendown() 
+t.circle(45) 
+  
+t.color("yellow") 
+t.penup() 
+t.goto(-55, -75) 
+t.pendown() 
+t.circle(45) 
+  
+t.color("green") 
+t.penup() 
+t.goto(55, -75) 
+t.pendown() 
+t.circle(45) 
 
 turtle.done()
