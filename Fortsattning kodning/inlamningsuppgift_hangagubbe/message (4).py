@@ -66,9 +66,9 @@ class Hangagubbe():
         attempts and the guessed letters
         """
         # We append withespaces both sides to make the game look prettier
-        print('\n')
+        #print('\n')
         #print('\n'.join(HANGMAN[:self.fails]))
-        print('\n')
+        #print('\n')
         print(' '.join(self.game_play))
 
     def update_progress(self, letter, indexes):

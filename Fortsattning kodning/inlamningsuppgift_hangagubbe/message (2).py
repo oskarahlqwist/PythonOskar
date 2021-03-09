@@ -5,13 +5,10 @@ turtle.speed('fastest')
 HANGMAN = ['1','2','3','4','5','6']
 
 ORDET = []
-
 ordlista = ['KINGEN']
-
+ORDET.append(random.choice(ordlista))
 # file = open('ordlista1.txt','r') # file.txt är bara namnet på fieln  r är för reda 
 # f = file.readlines()
-
-
 
 # for line in f:
 #     line = line.upper()
@@ -21,30 +18,24 @@ ordlista = ['KINGEN']
 #         ordlista.append(line)     
 
 
-ORDET.append(random.choice(ordlista))
+
 
 class Hangagubbe():
-    """
-    
-    """
-
+  
     def __init__(self, the_word):
         self.fails = 0
         self.the_word = the_word
         self.game_play = list('_' * len(self.the_word))
-        
 
     def indexes(self, letter):
         """
         tar in en bokstav och retunerar en lista med indexet på "the_word"
-
         """
         return [i for i, char in enumerate(self.the_word) if letter == char]
         # gåringenom "the_word" retunerar index för varje bokstav i ordet
         # enurmarete gör varje bokstav i "the_word" med till hörande index till ett "object" "tupel"
 
     def check_input(self, input_): # validerar input 
-          
         """
         Method to validate if an user input is not just a letter (it means the
         input is a number or a text with more than 1 char)
@@ -156,8 +147,6 @@ class Hangagubbe():
                 elif self.fails==6:
                     t.left(120)
                     t.forward(45)
-
-        
 
         print("\n DU FÖRLORA")
         print('Ordet var: {0}'.format(self.the_word))
