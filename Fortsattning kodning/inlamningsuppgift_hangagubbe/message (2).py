@@ -6,7 +6,7 @@ HANGMAN = ['1','2','3','4','5','6']
 
 ORDET = []
 
-ordlista = ['Fotboll','Tennis']
+ordlista = ['KINGEN']
 
 # file = open('ordlista1.txt','r') # file.txt är bara namnet på fieln  r är för reda 
 # f = file.readlines()
@@ -22,14 +22,6 @@ ordlista = ['Fotboll','Tennis']
 
 
 ORDET.append(random.choice(ordlista))
-
-
-
-
-
-
-
-
 
 class Hangagubbe():
     """
@@ -66,9 +58,9 @@ class Hangagubbe():
         attempts and the guessed letters
         """
         # We append withespaces both sides to make the game look prettier
-        print('\n')
-        print('\n'.join(HANGMAN[:self.fails]))
-        print('\n')
+        #print('\n')
+        #print('\n'.join(HANGMAN[:self.fails]))
+        #print('\n')
         print(' '.join(self.game_play))
 
     def update_progress(self, letter, indexes):
@@ -114,7 +106,7 @@ class Hangagubbe():
                 self.update_progress(user_input, indexes)
                 # If there is no letter to find in the word
                 if self.game_play.count('_') == 0:
-                    print('\n¡Yay! You win!')
+                    print('\n DU VANN!')
                     print('The word is: {0}'.format(self.the_word))
                     quit()
             else:
@@ -136,19 +128,19 @@ class Hangagubbe():
                     t.left(90)
                     t.penup()
                     t.forward(40)
-                    print('Huvud')
+                    print("Du har 5 försök kvar")
                 elif self.fails==2:
-                    print('Huvud + Hals')
+                    print("Du har 4 försök kvar")
                     t.pendown()
                     t.forward(20)
                 elif self.fails==3:
-                    print('Huvud + hals + högerarm')
+                    print("Du har 3 försök kvar")
                     t.right(120)
                     t.forward(40)
                     t.right(180)
                     t.forward(40)
                 elif self.fails==4:
-                    print('Huvud + hals + höger och vänsterarm')
+                    print("Du har 2 försök kvar")
                     t.left(60)
                     t.forward(40)
                     t.left(180)
@@ -156,7 +148,7 @@ class Hangagubbe():
                     t.left(60)
                     t.forward(30)
                 elif self.fails==5:
-                    print('Huvud + hals + armar + högerben')
+                    print("Du har 1 försök kvar")
                     t.left(30)
                     t.forward(45)
                     t.right(180)
@@ -167,8 +159,8 @@ class Hangagubbe():
 
         
 
-        print("\n¡OMG! You lost!")
-        print('The word is: {0}'.format(self.the_word))
+        print("\n DU FÖRLORA")
+        print('Ordet var: {0}'.format(self.the_word))
         quit()
 
 
