@@ -18,8 +18,6 @@ ORDET.append(random.choice(ordlista))
 #         ordlista.append(line)     
 
 
-
-
 class Hangagubbe():
   
     def __init__(self, the_word):
@@ -72,7 +70,6 @@ class Hangagubbe():
             
             else:
                 return(user_input)
-           
         
     def play(self):
         """
