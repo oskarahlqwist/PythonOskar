@@ -31,7 +31,7 @@ class Player:
         
         #get och set metoder – används inte i testfilen...    
     def __str__(self):
-        return '%-20s %-8s %-8.3f %-4d %-15s' %
+        return '%-20s %-8s %-8.3f %-4d %-15s'
         (self.__namn__,self.__position__,self.__batting_average__, \
             self.__mlb_experience__,self.__team__)
         
