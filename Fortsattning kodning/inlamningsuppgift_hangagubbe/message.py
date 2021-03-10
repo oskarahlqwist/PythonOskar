@@ -54,7 +54,7 @@ class Hangagubbe():
     
     def check_guessed_letters(self, letter):
         """
-        Lägger till bokstaven i en lista och printar ut
+        Lägger till bokstaven i en lista med använda bokstäver och printar ut
         """
         if letter not in self.guessed_letters:
             self.guessed_letters.append(letter)
