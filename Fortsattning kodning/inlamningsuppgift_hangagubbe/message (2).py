@@ -17,7 +17,6 @@ ORDET.append(random.choice(ordlista))
 #     else:
 #         ordlista.append(line)     
 
-
 class Hangagubbe():
   
     def __init__(self, the_word):
@@ -52,6 +51,7 @@ class Hangagubbe():
         #print('\n')
         print(' '.join(self.game_play))
 
+
     def update_progress(self, letter, indexes):
         """
         Method to update the game progress with the guessed letters
@@ -67,7 +67,6 @@ class Hangagubbe():
             if user_input.isalpha():
                 user_input = user_input.upper()
                 return user_input
-            
             else:
                 return(user_input)
         
@@ -76,14 +75,21 @@ class Hangagubbe():
         Method to play the game, it prompts the user for a letter and plays
         the game until the user guesses the word or lose his attempts
         """
+        guessed_letters = []
+
         while self.fails < len(HANGMAN):
             self.print_game_status()
             user_input = self.get_user_input()
+
+            if user_input not in guessed_letters:
+                guessed_letters.append(user_input)
+                print("Använda bokstäver: "(','.join(guessed_letters))
 
             # Validate the user input
             if self.check_input(user_input):
                 print(user_input,'är inte En bokstav')
                 continue
+
             # Check if the letter is not already guessed
             if user_input in self.game_play:
                 print('Du har redan gissat på den bokstaven')
