@@ -5,7 +5,7 @@ turtle.speed('fastest')
 HANGMAN = ['1','2','3','4','5','6']
 
 ORDET = []
-ordlista = ['KINGEN']
+ordlista = ['OSKAR']
 ORDET.append(random.choice(ordlista))
 # file = open('ordlista1.txt','r') # file.txt är bara namnet på fieln  r är för reda 
 # f = file.readlines()
@@ -83,13 +83,12 @@ class Hangagubbe():
 
             if user_input not in guessed_letters:
                 guessed_letters.append(user_input)
-                print("Använda bokstäver: "(','.join(guessed_letters))
+                print("\n""Använda bokstäver: ", ", ".join(guessed_letters))
 
             # Validate the user input
             if self.check_input(user_input):
                 print(user_input,'är inte En bokstav')
                 continue
-
             # Check if the letter is not already guessed
             if user_input in self.game_play:
                 print('Du har redan gissat på den bokstaven')
