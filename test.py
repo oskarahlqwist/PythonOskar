@@ -1,37 +1,11 @@
-import turtle
+import random
+"""
+file = open('D:\Kodning\Python projekt\Fortsattning kodning\inlamningsuppgift_hangagubbe\ordlista.txt').readlines() # file.txt är bara namnet på fieln  r är för reda 
+line = file[0]
+words = line.split() 
+myword = random.choice(words)
+print(myword)"""
 
-t = turtle.Turtle()
 
-t.pensize(5) 
-  
-t.color("blue") 
-t.penup() 
-t.goto(-110, -25) 
-t.pendown() 
-t.circle(45) 
-
-t.color("black") 
-t.penup() 
-t.goto(0, -25) 
-t.pendown() 
-t.circle(45) 
-  
-t.color("red") 
-t.penup() 
-t.goto(110, -25) 
-t.pendown() 
-t.circle(45) 
-  
-t.color("yellow") 
-t.penup() 
-t.goto(-55, -75) 
-t.pendown() 
-t.circle(45) 
-  
-t.color("green") 
-t.penup() 
-t.goto(55, -75) 
-t.pendown() 
-t.circle(45) 
-
-turtle.done()
+import random
+print(random.choice(open('D:\Kodning\Python projekt\Fortsattning kodning\inlamningsuppgift_hangagubbe\ordlista.txt').read().split()))

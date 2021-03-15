@@ -2,5 +2,5 @@ Kaffe
 Kakor
 Fisk
 Bullar
-Flaggstångsknopp
+Flagga
 Flygplan
