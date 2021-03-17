@@ -27,7 +27,7 @@ t.pendown()
 t.color('yellow')
 t.speed(5)
 
-ordet = random.choice(open('D:\Kodning\Python projekt\Fortsattning kodning\inlamningsuppgift_hangagubbe\ordlista.txt').read().split())
+ordet = random.choice(open('ordlista.txt').read().split())
 
 #Hur många försök man får
 antal_liv = ['1','2','3','4','5','6']
