@@ -155,7 +155,7 @@ class Hangagubbe():
         t.write('LOOSER!', font=style, align='center')
         turtle.done()
         print('Ordet var: {0}'.format(self.the_word))
-        ##quit()
+        quit()
 
 the_word = the_word.upper()
 Hangagubbe = Hangagubbe(the_word)
