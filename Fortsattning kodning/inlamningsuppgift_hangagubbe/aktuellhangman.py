@@ -27,6 +27,7 @@ t.pendown()
 t.color('yellow')
 t.speed(5)
 
+
 ordet = random.choice(open('ordlista.txt').read().split())
 
 #Hur många försök man får
@@ -43,7 +44,7 @@ class Hangagubbe():
     ##Räknar hur många bostäver det slumpmässiga ordet har
     ##tar in en bokstav och retunerar med indexet som den har i ordet
     ##går ingenom varje bokstav i ordet retunerar index för varje bokstav
-    ##enurmarete gör varje bokstav i "ordet" med till hörande index till ett "object" "tupel"
+    ##enurmarete gör varje bokstav i "ordet" med tillhörande index till ett "object" "tupel"
         return [i for i, char in enumerate(self.ordet) if letter == char]
 
     def check_input(self, input_): 
