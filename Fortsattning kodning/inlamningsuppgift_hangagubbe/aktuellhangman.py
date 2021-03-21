@@ -27,7 +27,7 @@ t.pendown()
 t.color('yellow')
 t.speed(5)
 
-ordet = random.choice(open('ordlista.txt').read().split())
+ordet = random.choice(open('Fortsattning kodning\inlamningsuppgift_hangagubbe\ordlista.txt').read().split())
 
 #Hur många försök man får
 antal_liv = ['1','2','3','4','5','6']
@@ -156,6 +156,7 @@ class Hangagubbe():
         print('Ordet var: {0}'.format(self.ordet))
         turtle.done()
 
+#if input("Tryck 1 för att spela \nTryck 2 för att avsluta") == 1:
 ordet = ordet.upper()
 Hangagubbe = Hangagubbe(ordet)
 Hangagubbe.spela()
